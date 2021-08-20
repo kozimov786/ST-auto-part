@@ -12,6 +12,7 @@
 
 <body>
   <header class="site-header">
+    <h1 class="visually-hidden">ST Auto Parts</h1>
     <div class="site-header__top container">
 
       <a class="site-header__location" href="#">Москва</a>
@@ -38,15 +39,15 @@
       <a class="logo site__logo" href="#">
         <img class="logo__img" src="img/site-log.svg" alt="site logo" width="200" height="48">
       </a>
-      <form class="header-form" action="">
-        <select class="header-form__select" name="" id="">
+      <form class="header-form">
+        <select class="header-form__select">
           <option value="">Выберите марку</option>
           <option value="">марку</option>
         </select>
         <label for="search-input">
-          <input class="header-form__input" type="text" placeholder="Искать ..." name="search-input" required>
+          <input class="header-form__input" type="text" placeholder="Искать ..." id="search-input" required>
         </label>
-        <button class="search-btn" type="search"></button>
+        <button class="search-btn" type="submit"></button>
       </form>
       <a class="basket" href="#">
         <img src="img/basket-icon.png" alt="basket-icon" width="20" height="18">
@@ -66,22 +67,23 @@
 
           <a class="menu__burger" href="">Каталог запчастей</a>
 
-          <ul class="menu-list">
+          <ul class="nav-menu-list">
 
-            <li class="menu__item">
-              <a class="menu__link" href="">Автокаталог</a>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">Автокаталог</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">О компании</a>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">О компании</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Сотрудничество</a>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">Сотрудничество</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Контакты</a>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link" href="">Контакты</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link menu__link--call" href="">8 800 444 55 66 <span>Беслпатный звонок по РФ</span></a>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link menu__link--call" href="">8 800 444 55 66 <span>Беслпатный звонок по
+                  РФ</span></a>
             </li>
 
           </ul>
@@ -101,6 +103,7 @@
       </section>
 
       <section class="convenience">
+        <h2 class="visually-hidden">Convenience</h2>
         <ul class="convenience-list">
           <li class="convenience__item convenience__item-delevery">
             <p class="convenience__text">Бесплатная доставка до терминала ТК</p>
@@ -124,16 +127,26 @@
         <h2 class="truck-parts__title">Запчасти для грузовых авто</h2>
 
         <div class="parts-wrapper">
-          <div class="bus-parts bus-active">
-            <div class="bus-parts__info">
-              <h3 class="bus-parts__title">Запчасти на грузовые
-                автомобили
-                и автобусы</h3>
-              <p class="bus-parts__text">Все модели запчастей для грузовых автомобилей и автобусов</p>
+          <div class="bus-parts truck-active">
+            <div class="bus-info__box">
+              <div class="bus-parts__info">
+                <h3 class="bus-parts__title">Запчасти на грузовые
+                  автомобили
+                  и автобусы</h3>
+                <p class="bus-parts__text">Все модели запчастей для грузовых автомобилей и автобусов</p>
+              </div>
+              <div class="images__box">
+                <img src="img/brands-first.png" alt="brand names" width="315" height="164">
+              </div>
             </div>
-            <div class="images__box">
-              <img src="img/Group 2905.png" alt="brand names">
-            </div>
+            <a class="truck-btn truck-btn__active" href="#"></a>
+          </div>
+
+          <div class="korean card-truck">
+            <h2 class="card-truck__title">Китайские
+              грузовики</h2>
+            <p class="card-truck__text">Запчасти для Китайских грузовых автомобилей</p>
+            <img src="img/brands-second.png" alt="brands" width="285" height="74">
             <a class="truck-btn" href="#"></a>
           </div>
 
@@ -141,14 +154,8 @@
             <h2 class="card-truck__title">Китайские
               грузовики</h2>
             <p class="card-truck__text">Запчасти для Китайских грузовых автомобилей</p>
-            <img src="img/Rectangle 2327 (1).png" alt="brands" width="285" height="74">
-          </div>
-
-          <div class="korean card-truck">
-            <h2 class="card-truck__title">Китайские
-              грузовики</h2>
-            <p class="card-truck__text">Запчасти для Китайских грузовых автомобилей</p>
-            <img src="img/Rectangle 2327.png" alt="brands" width="285" height="74">
+            <img src="img/brands-third.png" alt="brands" width="285" height="74">
+            <a class="truck-btn" href="#"></a>
           </div>
         </div>
 
@@ -226,6 +233,7 @@
 
       <section class="sale">
         <div class="sale-header">
+          <h2 class="visually-hidden">Sale</h2>
           <p class="sale__info">Акции</p>
           <a class="sale__link" href="#">Смотреть все акции</a>
         </div>
@@ -247,7 +255,9 @@
           <div class="card">
             <p class="card-time">30<span>апреля</span></p>
             <div class="card-info">
-              <h2 class="card-info__title">Режим работы на майские праздники</h2>
+              <a class="card-info__link" href="#">
+                <h2 class="card-info__title">Режим работы на майские праздники</h2>
+              </a>
               <p class="card-info__text">Режим работы на майские праздники режим работы на майские</p>
             </div>
           </div>
@@ -255,7 +265,9 @@
           <div class="card">
             <p class="card-time">30<span>апреля</span></p>
             <div class="card-info">
-              <h2 class="card-info__title">Режим работы на майские праздники</h2>
+              <a class="card-info__link" href="#">
+                <h2 class="card-info__title">Режим работы на майские праздники</h2>
+              </a>
               <p class="card-info__text">Режим работы на майские праздники режим работы на майские</p>
             </div>
           </div>
@@ -263,7 +275,9 @@
           <div class="card">
             <p class="card-time">30<span>апреля</span></p>
             <div class="card-info">
-              <h2 class="card-info__title">Режим работы на майские праздники</h2>
+              <a class="card-info__link" href="#">
+                <h2 class="card-info__title">Режим работы на майские праздники</h2>
+              </a>
               <p class="card-info__text">Режим работы на майские праздники режим работы на майские</p>
             </div>
           </div>
@@ -346,14 +360,14 @@
           <h2 class="footer-top__title">Полезная рассылка</h2>
           <p class="footer-top__text">Подпишитесь на рассылку и получайте свежие
             материалы и новости с нашего сайта быстрее всех</p>
-          <form class="footer-form" action="">
+          <form class="footer-form">
             <input class="footer-form__input" type="email" placeholder="Ваш email" required aria-label="email-input">
             <button class="footer-form__btn" type="submit">Хочу получать рассылку</button>
 
           </form>
           <span>При подписке вы принимаете условия пользовательского соглашения</span>
         </div>
-        <img src="img/Group 2871.png" alt="email img">
+        <img src="img/email.png" alt="email img">
         <div class="email-message">
           <p class="message__text">Рассылка новостей и обновлений</p>
         </div>
@@ -448,10 +462,18 @@
                 </address>
               </li>
               <li class="menu__item social-wrapper">
-                <img src="img/odnoklassniki-logo 1.svg" alt="">
-                <img src="img/vk-social-network-logo 1.svg" alt="">
-                <img src="img/instagram 1.svg" alt="">
-                <img src="img/facebook-logo 1.png" alt="">
+                <a href="#">
+                  <img class="social-brand" src="img/odnoklassniki-logo.svg" alt="ok brand logo">
+                </a>
+                <a href="#">
+                  <img class="social-brand" src="img/vk-social-network-logo.svg" alt="vk brand logo">
+                </a>
+                <a href="#">
+                  <img class="social-brand" src="img/instagram.svg" alt="instagram brand logo">
+                </a>
+                <a href="#">
+                  <img class="social-brand" src="img/facebook-logo.png" alt="facebook brand logo">
+                </a>
               </li>
 
             </ul>

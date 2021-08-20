@@ -37,6 +37,15 @@ body{
   padding-left: 45px;
   padding-right: 45px;
 }
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 /* Site-header-top */
 .site-header__top{
@@ -96,7 +105,7 @@ body{
   padding-bottom: 24px;
 }
 .site__logo{
-  margin-right: auto;
+  margin-right: 30px;
 }
 .logo__img{
   display: block;
@@ -106,7 +115,7 @@ body{
   border: 1px solid var(--bg-color);
   border-radius: 8px;
   position: relative;
-  margin-right: auto;
+  margin-right: 80px;
 }
 .header-form__select{
   width: 213px;
@@ -190,6 +199,9 @@ body{
   display: flex;
   align-items: center;
 }
+.menu__burger:hover{
+  background-color: #46AECF;
+}
 .menu__burger::before{
   content: "";
   width: 18px;
@@ -199,7 +211,7 @@ body{
   background-image: url(../img/burger.png);
   margin-right: 15px;
 }
-.menu-list{
+.nav-menu-list{
    width: 100%;
   list-style-type: none;
   padding: 0;
@@ -208,8 +220,13 @@ body{
   align-items: center;
   justify-content: space-around;
 }
-
-.menu__link{
+.nav-menu__item{
+  padding: 17px 32px;
+}
+.nav-menu__item:hover{
+  background-color: var(--bg-color);
+}
+.nav-menu__link{
   text-decoration: none;
   color: var(--black);
   line-height: 16px;
@@ -308,37 +325,41 @@ body{
   margin-right: 8px;
 }
 .convenience__item-delevery::before{
-  background-image: url(../img/shipping\ 1.png);
+  background-image: url(../img/shipping.png);
 }
 .convenience__item-fast::before{
-  background-image: url(../img/Group.png);
+  background-image: url(../img/box.png);
 }
 .convenience__item-return::before{
-  background-image: url(../img/delivery\ 1.png);
+  background-image: url(../img/delivery.png);
 }
 .convenience__item-year::before{
-  background-image: url(../img/live-chat\ 2.png);
+  background-image: url(../img/live-chat.png);
 }
 .convenience__item-center::before{
-  background-image: url(../img/customer-support\ 1.png);
+  background-image: url(../img/customer-support.png);
 }
 
 /* truck-parts */
 .bus-parts{
   width: 630px;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   padding: 16px;
   background-color: #fafafa;
   border-radius: 16px;
-  position: relative;
-  padding-bottom: 40px;
   margin-right: 30px;
+}
+.bus-info__box{
+  display: flex;
+  align-items: flex-start;
 }
 .parts-wrapper{
   display: flex;
+  margin-bottom: 32px;
 }
-.bus-active{
+.truck-active{
   border: 2px solid var(--main-blue);
 }
 .bus-parts__info{
@@ -362,14 +383,13 @@ body{
   background-repeat: no-repeat;
   background-size:15px 15px, contain;
   background-position: center center;
-  background-color:var(--main-blue);
+  background-color:var(--bg-color);
   border-radius: 50%;
+  background-image: url(../img/arrrow-grey.svg);
+}
+.truck-btn__active{
+  background-color: var(--main-blue);
   background-image: url(../img/arrow-white.svg);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 8px;
 }
 .truck-parts__title{
   font-weight: bold;
@@ -383,6 +403,10 @@ body{
   padding: 16px;
   background-color:#fafafa;
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .card-truck:not(:last-child){
   margin-right: 30px;
@@ -393,6 +417,10 @@ body{
   line-height: 130%;
   margin: 0;
   margin-bottom: 4px;
+}
+.cars-brand__hino_title h2 {
+  margin-top: 0;
+  margin-bottom: 19px;
 }
 .card-truck__text{
   font-weight: 550;
@@ -415,6 +443,7 @@ body{
   display: flex;
   align-items:flex-start;
   justify-content:space-between;
+  margin-bottom: 53px;
 }
 .hino{
 display: flex;
@@ -517,6 +546,11 @@ color: rgba(0, 0, 0, 0.5);
   border-radius: 16px;
   display: flex;
   align-items: flex-start;
+  transition: 0.3s ease;
+}
+.card:hover{
+  background-color:#46AECF;
+  cursor: pointer;
 }
 .card:not(:last-child){
   margin-right: 30px;
@@ -557,6 +591,10 @@ color: rgba(0, 0, 0, 0.5);
   padding: 0;
   margin: 0;
   padding-left: 15px;
+}
+.card-info__link{
+  text-decoration: none;
+  color: var(--black);
 }
 
 /* FOOTER_STYLE */
@@ -603,6 +641,13 @@ color: rgba(0, 0, 0, 0.5);
   padding: 12px 34px;
   border-radius: 8px;
   border:none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.footer-form__btn:hover{
+  background-color: var(--bg-color);
+  color: var(--main-blue);
+  box-shadow:inset 0 0 0 2px var(--main-blue);
 }
 .footer-form__wrapper span{
   font-weight: 550;
@@ -668,6 +713,7 @@ address{
   font-size: 14px;
   line-height: 130%;
   color: #333333;
+  text-decoration: none;
 }
 .footer__item-title{
   font-weight: bold;
@@ -695,4 +741,7 @@ address{
   width: 168px;
   align-items: center;
   justify-content: space-between;
+}
+.social-brand{
+  vertical-align: middle;
 }
